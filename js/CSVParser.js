@@ -12,14 +12,16 @@ var CSVParser = {
   //---------------------------------------
   // UTILS
   //---------------------------------------
-  
-  isNumber: function(string) {
-    if( (string == null) || isNaN( new Number(string) ) ) {
-      return false;
-    }
-    return true;
-  },
-  
+
+    isNumber: function(string) {
+        //trim leading and trailing whitespace
+        //string = string.toString().replace(/^\s+/,"").replace(/\s+$/,"");
+        if( (string == null) || !/^-?[0-9]+[.]?[0-9]+$/.test(string) ) {
+            return false;
+        }
+        return true;
+    },
+
   
   //---------------------------------------
   // PARSE
