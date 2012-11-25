@@ -16,10 +16,11 @@ var CSVParser = {
     isNumber: function(string) {
         //trim leading and trailing whitespace
         //string = string.toString().replace(/^\s+/,"").replace(/\s+$/,"");
-        if( (string == null) || !/^-?[0-9]+[.]?[0-9]+$/.test(string) ) {
-            return false;
-        }
-        return true;
+       // if( (string == null) || !/^-?[0-9]+[.]?[0-9]+[^0-9]$/.test(string) ) {
+       //     return false;
+       // }
+        return !isNaN(parseFloat(n)) && isFinite(n);
+        //return true;
     },
 
   
