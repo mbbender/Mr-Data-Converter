@@ -13,7 +13,7 @@ var CSVParser = {
   // UTILS
   //---------------------------------------
 
-    isNumber: function(string) {
+    isNumber: function(n) {
         //trim leading and trailing whitespace
         //string = string.toString().replace(/^\s+/,"").replace(/\s+$/,"");
        // if( (string == null) || !/^-?[0-9]+[.]?[0-9]+[^0-9]$/.test(string) ) {
